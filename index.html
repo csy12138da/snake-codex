@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>贪吃蛇（Codex）</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="top">
+        <h1>贪吃蛇</h1>
+        <div class="meta">
+          <div>分数：<span id="score">0</span></div>
+          <div>最高：<span id="best">0</span></div>
+          <div>速度：<span id="speed">1x</span></div>
+        </div>
+      </header>
+
+      <section class="board-wrap">
+        <canvas id="board" width="480" height="480" aria-label="Snake board"></canvas>
+      </section>
+
+      <section class="controls">
+        <div class="row">
+          <button id="startBtn">开始 / 暂停</button>
+          <button id="restartBtn">重新开始</button>
+        </div>
+        <div class="row hint">方向键 / WASD 控制，空格暂停</div>
+      </section>
+
+      <footer class="footer">简洁版 HTML + JS</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

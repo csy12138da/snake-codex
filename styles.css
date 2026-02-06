@@ -1,0 +1,114 @@
+:root {
+  --bg: #f8f6f1;
+  --ink: #1f1f1f;
+  --accent: #f25c54;
+  --grid: #e8e1d2;
+  --snake: #1f7a8c;
+  --food: #f25c54;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Futura", "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 10% 10%, #fff 0, #f8f6f1 40%, #efe7d7 100%);
+  color: var(--ink);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.page {
+  width: min(680px, 94vw);
+  padding: 24px 20px 28px;
+  border: 3px solid var(--ink);
+  background: #fffaf0;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.board-wrap {
+  margin-top: 16px;
+  border: 2px solid var(--ink);
+  padding: 10px;
+  background: #fff;
+}
+
+#board {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: repeating-linear-gradient(
+      0deg,
+      var(--grid),
+      var(--grid) 1px,
+      transparent 1px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--grid),
+      var(--grid) 1px,
+      transparent 1px,
+      transparent 30px
+    );
+}
+
+.controls {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.controls .row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls button {
+  font: inherit;
+  padding: 8px 14px;
+  border: 2px solid var(--ink);
+  background: #fff;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.controls button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.hint {
+  font-size: 12px;
+  color: #555;
+}
+
+.footer {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+}
